@@ -9,7 +9,7 @@ async function handleResponse(response, bypass = false, silent = false) {
 }
 
 async function callApi({
-  method = "GET",
+  method = 'GET',
   hasBody = false,
   url,
   body,
@@ -18,7 +18,7 @@ async function callApi({
   const response = await fetch(url, {
     method,
     headers: {
-      ...(hasBody && { "Content-Type": "application/json" }),
+      ...(hasBody && { 'Content-Type': 'application/json' }),
     },
     ...(hasBody && body && { body: JSON.stringify(body) }),
   });
@@ -34,7 +34,7 @@ export default {
   get: (url, options) => callApi({ url, options }),
   post: (url, body, options) =>
     callApi({
-      method: "POST",
+      method: 'POST',
       hasBody: true,
       url,
       body,
@@ -42,7 +42,7 @@ export default {
     }),
   put: (url, body, options) =>
     callApi({
-      method: "PUT",
+      method: 'PUT',
       hasBody: true,
       url,
       body,
@@ -50,7 +50,7 @@ export default {
     }),
   patch: (url, body, options) =>
     callApi({
-      method: "PATCH",
+      method: 'PATCH',
       hasBody: true,
       url,
       body,
@@ -58,7 +58,7 @@ export default {
     }),
   destroy: (url, body, options) =>
     callApi({
-      method: "DELETE",
+      method: 'DELETE',
       url,
       body,
       options,

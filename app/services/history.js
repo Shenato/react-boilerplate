@@ -1,8 +1,8 @@
-import { createBrowserHistory } from "history";
+import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
 function navigate(path, replace = false) {
-  const goToPath = path === "/" ? "" : path;
+  const goToPath = path === '/' ? '' : path;
   if (replace) {
     history.replace(`${goToPath}`);
   } else {

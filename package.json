@@ -8,7 +8,9 @@
     "dev": "webpack-dev-server --config ./config/webpack.dev.js",
     "build-dev": "webpack --config ./config/webpack.dev.js",
     "start": "webpack-dev-server --port $PORT --host 0.0.0.0 --config ./config/webpack.prod.js",
-    "build": "NODE_ENV=production && webpack --config ./config/webpack.prod.js"
+    "build": "NODE_ENV=production && webpack --config ./config/webpack.prod.js",
+    "lint": "eslint \"app/**/*.js\" \"app/**/*.jsx\"",
+    "format": "eslint --fix \"app/**/*.js\" \"app/**/*.jsx\""
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,6 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.0",
     "dotenv": "^7.0.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^5.0.2",
     "history": "^4.10.1",
     "html-webpack-plugin": "^3.2.0",
@@ -50,6 +51,15 @@
     "webpack-dev-server": "^3.10.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "prettier": "^2.2.1"
   }
 }
